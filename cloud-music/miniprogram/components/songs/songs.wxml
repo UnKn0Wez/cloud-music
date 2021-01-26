@@ -1,0 +1,8 @@
+<!--components/songs/songs.wxml-->
+<view class="container">
+  <text class="songs-id">{{songs.id}}</text>
+  <view class="right-container"><text class="songs-name">{{songs.name}}
+  </text>
+  <text class="songs-writer">{{songs.writer}}</text></view>
+  
+</view>

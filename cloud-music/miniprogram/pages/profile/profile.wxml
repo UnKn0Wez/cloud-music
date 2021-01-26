@@ -1,0 +1,12 @@
+<!--pages/profile/profile.wxml-->
+<view class="profile">
+  <view class="page-body">
+    <view class="page-section page-section-spacing">
+      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
+        <text>{{text}}</text>
+      </view>
+      <button disabled="{{!canAdd}}" bindtap="add">新增一行</button>
+      <button disabled="{{!canRemove}}" bindtap="remove">删除一行</button>
+    </view>
+  </view>
+</view>

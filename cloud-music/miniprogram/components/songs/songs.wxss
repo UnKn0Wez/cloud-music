@@ -1,0 +1,22 @@
+/* components/songs/songs.wxss */
+.container{
+  display: flex;
+  width: 100%;
+}
+.songs-id{
+  font-size: 40rpx;
+  color: #817f83;
+  margin: 40rpx 40rpx 20rpx 15rpx;
+}
+.right-container{
+  margin: 15rpx 10rpx 15rpx 10rpx;
+}
+.songs-name{
+  font-size: 50rpx;
+  color: black;
+}
+.songs-writer{
+  color: #817f83;
+  font-size: 30rpx;
+}
+
