@@ -1,6 +1,6 @@
 {
   "usingComponents": {    
-    "song-sheet" : "/components/song-sheet/song-sheet"
+    "x-playlist" : "/components/playlist/playlist"
   },
   "navigationBarTitleText": "音乐"
   

@@ -1,6 +1,0 @@
-<!--components/song-sheet/song-sheet.wxml-->
-<view class="container">
-  <image src="{{ssUrl.picUrl}}" class="img"></image>
-  <text class="count">{{_count}}</text>
-  <view class="name">{{ssUrl.name}}</view>
-</view>

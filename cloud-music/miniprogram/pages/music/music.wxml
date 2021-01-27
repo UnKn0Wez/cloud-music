@@ -6,7 +6,7 @@
 </swiper>
 <text class="title">场景歌单</text>
 <view class="playlist-container">
-  <block wx:for="{{ssUrl}}" wx:key="id">
-    <song-sheet ssUrl="{{item}}"></song-sheet>
+  <block wx:for="{{playlist}}" wx:key="_id">
+    <x-playlist ssUrl="{{item}}"></x-playlist>
   </block>
 </view>

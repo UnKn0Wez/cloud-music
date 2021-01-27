@@ -36,50 +36,14 @@ Page({
         url: 'http://p1.music.126.net/9Ayx-EeCnuLRWKTcIhGB6g==/109951165664742856.jpg?imageView&quality=89'
       },
     ],
-    ssUrl: [{
-      picUrl: 'http://p3.music.126.net/qfKmb5grEFZNTGYKIONg1A==/109951165664253358.jpg?param=200y200',
-      count:990010000,
-      name : '[华语速爆新歌] 那英×姚晨首度联手合唱',
-      id : '2001',
-      },
-      {
-        picUrl: 'http://p3.music.126.net/RpzIkeUOZ4V7WBecytqH0Q==/109951165515305859.jpg?param=200y200',
-        count:100000,
-      name : '随情节流淌|富有叙事感的柔软音乐片段',
-      id : '2002',
-      },
-      {
-        picUrl: 'http://p4.music.126.net/PJylNWy_2-jI7LRgQ2Cm6w==/109951165649129522.jpg?param=200y200',
-        count:530000,
-      name : '流浪太空 | 宇宙永远是治愈一切的良药',
-      id : '2003',
-      },
-      {
-        picUrl: 'http://p4.music.126.net/1hzImIzOsRzG0iBSvHOO7w==/109951165511341127.jpg?param=200y200',
-        count:4665530000,
-      name : '今天从《Steady Me》听起|私人雷达',
-      id : '2004',
-      },
-      {
-        picUrl: 'http://p2.music.126.net/ySHtkTD4VuhQ3JDv4sreag==/109951165650282126.jpg?param=140y140',
-        count:140000,
-      name : '欧美小调° | 冬日舒适心情指南',
-      id : '2005',
-      },
-      {
-        picUrl: 'http://p4.music.126.net/AhgGd8XDHKm4HEywuLBp_A==/109951165662490579.jpg?param=200y200',
-        count:9000000,
-      name : '希望你的可爱，可以治愈一切烦恼',
-      id : '2006',
-      },
-    ],
+    playlist:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this._getPlaylist()
   },
 
   /**
@@ -129,5 +93,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  _getPlaylist(){
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.cloud.callFunction({
+      name:'playlist'
+    }).then((res)=>{
+      console.log(res)
+      this.setData({
+        playlist:res.result
+      })
+      wx.hideLoading()
+    })
   }
 })

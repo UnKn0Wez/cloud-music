@@ -4,4 +4,3 @@
     <songs songs="{{item}}"></songs>
   </block>
 </scroll-view>
-

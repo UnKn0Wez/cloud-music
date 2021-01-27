@@ -3,8 +3,9 @@
     "pages/music/music",
     "pages/find/find",
     "pages/profile/profile",
-    "components/song-sheet/song-sheet",
-    "components/sons/sons"
+    "components/playlist/playlist",
+    "components/songs/songs",
+    "pages/test/test"
   ],
   "requiredBackgroundModes": [
     "audio"

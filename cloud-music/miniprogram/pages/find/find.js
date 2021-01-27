@@ -5,33 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    songs : [{
-      id : 1,
-      name : '他夏了夏天',
-      writer : '苏打绿-夏/狂热'
-    },
-    {
-      id : 2,
-      name : '橘子汽水',
-      writer : '南拳妈妈-优の良曲南搞小孩(新歌+精选)'
-    },
-    {
-      id : 3,
-      name : '夏天的味道',
-      writer : '陆虎-夏天的味道'
-    },
-    {
-      id : 4,
-      name : '一样的夏天',
-      writer : '孙燕姿-My Story,Your Song经典全纪录'
-    },
-    {
-      id : 5,
-      name : '他夏了夏天',
-      writer : '苏打绿-夏/狂热'
-    },
-    
-  ],
+    songs: [{
+        id: 1,
+        name: '他夏了夏天',
+        writer: '苏打绿-夏/狂热'
+      },
+      {
+        id: 2,
+        name: '橘子汽水',
+        writer: '南拳妈妈-优の良曲南搞小孩(新歌+精选)'
+      },
+      {
+        id: 3,
+        name: '夏天的味道',
+        writer: '陆虎-夏天的味道'
+      },
+      {
+        id: 4,
+        name: '一样的夏天',
+        writer: '孙燕姿-My Story,Your Song经典全纪录'
+      },
+      {
+        id: 5,
+        name: '他夏了夏天',
+        writer: '苏打绿-夏/狂热'
+      },
+
+    ],
   },
 
   /**
