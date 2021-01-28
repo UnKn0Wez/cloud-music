@@ -1,6 +1,6 @@
 /* pages/music/music.wxss */
 .swiper{
-  height: 340rpx;
+  height: 290rpx;
 }
 .img{
   width: 100%;

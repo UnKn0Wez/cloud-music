@@ -17,7 +17,7 @@ App({
     this.globalData = {}
   },
   onShow(options){
-    console.log('onShow 执行');
-    console.log(options);
+    // console.log('onShow 执行');
+    // console.log(options);
   }
 })

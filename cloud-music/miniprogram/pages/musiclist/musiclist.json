@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "q-musiclist" : "/components/musiclist/musiclist"
+  },
+  "navigationBarTitleText": "歌曲"
+}

@@ -12,7 +12,7 @@ const playlistCollection = db.collection('playlist')
 
 const axios = require('axios')
 
-const URL = 'https://qzwwx.cn1.utools.club/top/playlist/highquality?before=1503639064232&limit=20'
+const URL = 'https://qzwwx.cn1.utools.club/top/playlist/highquality?before=1503639064232&limit=100'
 // 云函数入口函数
 exports.main = async(event,context) =>{
   const{

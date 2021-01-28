@@ -9,7 +9,7 @@ Component({
     }
   },
   observers: {
-    ['ssUrl.count'](count){
+    ['ssUrl.playCount'](count){
       this.setData({
         _count: this._tranNumber(count,2)
       })
@@ -27,6 +27,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    goToMusiclist(){
+      wx.navigateTo({
+        url:`../../pages/musiclist/musiclist?playlistId=${this.properties.ssUrl.id}`,
+      })
+    },
     _tranNumber(num, point) {
       let numStr = num.toString().split('.')[0]
       if (numStr.length < 6) {
