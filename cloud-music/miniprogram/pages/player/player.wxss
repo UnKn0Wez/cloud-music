@@ -1,1 +1,86 @@
 /* pages/player/player.wxss */
+.player-container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(40rpx);
+  opacity: 0.5;
+  z-index: -1;
+}
+.player-mask{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  background-color: #222;
+}
+
+.player-info{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.player-disc{
+  width: 592rpx;
+  height: 592rpx;
+  background:url('https://image-un.oss-cn-zhangjiakou.aliyuncs.com/image/qzw/WX-music/disc.png') no-repeat center/contain;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,140rpx);
+}
+
+.player-disc::after{
+  content: '';
+  width: 192rpx;
+  height: 274rpx;
+  position: absolute;
+  top: -150rpx;
+  left: 266rpx;
+  background: url('https://image-un.oss-cn-zhangjiakou.aliyuncs.com/image/qzw/WX-music/needle.png') no-repeat center/contain;
+  transform: rotate(-15deg);
+  transform-origin:24rpx 10rpx ;
+}
+.player-img{
+  width: 368rpx;
+  height: 368rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -184rpx;
+  margin-left: -184rpx;
+}
+.control{
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+
+.iconfont{
+  color :#fefefe;
+}
+
+.icon-bofang1{
+  font-size: 120rpx;
+  margin: 0 50rpx;
+}
+
+.icon-tubiaozhizuomoban11-01{
+  font-size:80rpx;
+}
+
+.icon-tubiaozhizuomoban11-011{
+  font-size:80rpx;
+}
+

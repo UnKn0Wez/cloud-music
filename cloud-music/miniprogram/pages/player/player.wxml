@@ -1,2 +1,15 @@
 <!--pages/player/player.wxml-->
-你成功来到了播放页面！
+<!-- 全屏毛玻璃效果 -->
+<view wx:if="{{picUrl}}" class="player-container" style="background:url({{picUrl}}) center/cover no-repeat">
+</view>
+<view class="player-mask"></view>
+<view class="player-info">
+  <view class="player-disc">
+    <image class="player-img" src="{{picUrl}}"></image>
+  </view>
+  <view class="control">
+    <text class="iconfont icon-tubiaozhizuomoban11-011"></text>
+    <text class="iconfont icon-bofang1"></text>
+    <text class="iconfont icon-tubiaozhizuomoban11-01"></text>
+  </view>
+</view>
