@@ -1,14 +1,15 @@
 // pages/player/player.js
-let musiclist=[]
+let musiclist = []
 //用于记录当前播放歌曲index
-let playingIndex=0
+let playingIndex = 0
+const getBackgroundAudioManager = wx.getBackgroundAudioManager()
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    picUrl:''
+    picUrl: '',
+    isPlaying: false,
   },
 
   /**
@@ -17,36 +18,17 @@ Page({
   onLoad: function (options) {
     // console.log(options)
     // console.log(options.musicId,typeof(options.musicId))
-    playingIndex=options.index
-    musiclist=wx.getStorageSync('musiclist')
+    playingIndex = options.index
+    musiclist = wx.getStorageSync('musiclist')
     this._loadMusicDetail(options.musicId)
   },
 
-  _loadMusicDetail(musicId){
-    let music=musiclist[playingIndex]
-    console.log(music)
-    wx.setNavigationBarTitle({
-      title: music.name,
-    })
-    this.setData({
-      picUrl:music.al.picUrl
-    })
-    wx.cloud.callFunction({
-      name:'music',
-      data:{
-        musicId,
-        $url:'musicUrl',
-      }
-    }).then((res)=>{
-      console.log(res)
-    })
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
@@ -89,5 +71,69 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  togglePlaying() {
+    if (this.data.isPlaying) {
+      getBackgroundAudioManager.pause()
+    } else {
+      getBackgroundAudioManager.play()
+    }
+    this.setData({
+      isPlaying: !this.data.isPlaying
+    })
+  },
+  _loadMusicDetail(musicId) {
+    let music = musiclist[playingIndex]
+    // console.log(music)
+    wx.setNavigationBarTitle({
+      title: music.name,
+    })
+    this.setData({
+      picUrl: music.al.picUrl
+    })
+    wx.cloud.callFunction({
+      name: 'music',
+      data: {
+        musicId,
+        $url: 'musicUrl',
+      }
+    }).then((res) => {
+      // console.log(res)
+      const url = res.result.data[0].url
+      if (url === null) {
+        wx.showToast({
+          title: '没有权限播放',
+        })
+        getBackgroundAudioManager.pause()
+        this.setData({
+          isPlaying: false
+        })
+        return
+      }
+      getBackgroundAudioManager.src = url
+      getBackgroundAudioManager.title = music.name
+      getBackgroundAudioManager.coverImgUrl = music.al.picUrl
+      getBackgroundAudioManager.singer = music.ar[0].name
+      this.setData({
+        isPlaying: true
+      })
+      wx.hideLoading()
+    })
+  },
+  onPrev() {
+    playingIndex--
+    if (playingIndex < 0) {
+      playingIndex = musiclist.length - 1
+    }
+    this._loadMusicDetail(musiclist[playingIndex].id)
+
+  },
+  onNext() {
+    playingIndex++
+    if (playingIndex === musiclist.length) {
+      playingIndex = 0
+    }
+    this._loadMusicDetail(musiclist[playingIndex].id)
   }
+
 })
