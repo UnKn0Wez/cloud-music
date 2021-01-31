@@ -10,6 +10,8 @@ Page({
   data: {
     picUrl: '',
     isPlaying: false,
+    name:'',
+    writer:'',
   },
 
   /**
@@ -72,6 +74,11 @@ Page({
   onShareAppMessage: function () {
 
   },
+  fanhui() {
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
   togglePlaying() {
     if (this.data.isPlaying) {
       getBackgroundAudioManager.pause()
@@ -82,14 +89,17 @@ Page({
       isPlaying: !this.data.isPlaying
     })
   },
+
   _loadMusicDetail(musicId) {
     let music = musiclist[playingIndex]
-    // console.log(music)
+    console.log(music)
     wx.setNavigationBarTitle({
       title: music.name,
     })
     this.setData({
-      picUrl: music.al.picUrl
+      picUrl: music.al.picUrl,
+      name:music.al.name,
+      writer:music.ar[0].name+' - '+music.name
     })
     wx.cloud.callFunction({
       name: 'music',

@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    musiclist:[],
-    listInfo:{},
+    musiclist: [],
+    listInfo: {},
   },
 
   /**
@@ -15,34 +15,38 @@ Page({
   onLoad: function (options) {
     // console.log(options)
     wx.showLoading({
-      title:'加载中',
+      title: '加载中',
     })
     wx.cloud.callFunction({
-      name:'music',
-      data:{
-        playlistId:options.playlistId,
-        $url:'musiclist'
+      name: 'music',
+      data: {
+        playlistId: options.playlistId,
+        $url: 'musiclist'
       }
-    }).then((res)=>{
+    }).then((res) => {
       // console.log(res)
       // console.log(res.result)
       const pl = res.result.playlist
       this.setData({
-        musiclist:pl.tracks,
-        listInfo:{
-          coverImgUrl:pl.coverImgUrl,
-          name:pl.name,
+        musiclist: pl.tracks,
+        listInfo: {
+          coverImgUrl: pl.coverImgUrl,
+          name: pl.name,
         }
       })
       this._setMusiclist(
-      wx.hideLoading()
+        wx.hideLoading()
       )
     })
   },
-
-  _setMusiclist(){
+  fanhui() {
+    wx.navigateBack({
+      delta: 1,
+    })
+  },
+  _setMusiclist() {
     //将本歌单的歌曲列表存入本地存储
-    wx.setStorageSync('musiclist',this.data.musiclist)
+    wx.setStorageSync('musiclist', this.data.musiclist)
   },
 
   /**

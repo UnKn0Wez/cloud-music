@@ -1,10 +1,56 @@
 /* pages/music/music.wxss */
+.music-title{
+  background:-webkit-linear-gradient(left,#6190e8,#a7bfe8);
+  height: 180rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.music-title-top{
+height: 80rpx;
+}
+.music-title-bottom{
+  position: fixed;
+  top: 108rpx;
+  left: 27%;
+  height: 50rpx;
+  box-sizing: border-box;
+  background-color: #8a8a8a;
+  border-radius: 30rpx;
+}
+.music-container{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:-webkit-linear-gradient(left,#6190e8,#a7bfe8);
+  z-index: 0;
+}
+.music-mask{
+  position: absolute;
+  top: 180rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index:-2;
+}
 .swiper{
-  height: 290rpx;
+  margin-top: 200rpx;
+  height: 260rpx;
+  margin-left: 5%;
+  width: 90%;
 }
 .img{
   width: 100%;
   height: 100%;
+  border-radius: 20rpx;
+}
+.title{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
 }
 
 .playlist-container {
@@ -12,8 +58,4 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 10rpx;
-}
-.title{
-  margin-top: 10rpx;
-  margin-left: 20rpx;
 }

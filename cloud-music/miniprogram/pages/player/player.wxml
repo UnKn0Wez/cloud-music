@@ -1,5 +1,10 @@
 <!--pages/player/player.wxml-->
 <!-- 全屏毛玻璃效果 -->
+<text class="iconfont icon-fanhui" bind:tap="fanhui"></text>
+<view class="player-name">
+  <view>{{name}}</view>
+  <view class="player-name-writer">{{writer}}</view>
+</view>
 <view wx:if="{{picUrl}}" class="player-container" style="background:url({{picUrl}}) center/cover no-repeat">
 </view>
 <view class="player-mask"></view>
