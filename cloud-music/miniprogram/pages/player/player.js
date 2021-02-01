@@ -99,7 +99,7 @@ Page({
     this.setData({
       picUrl: music.al.picUrl,
       name:music.al.name,
-      writer:music.ar[0].name+' - '+music.name
+      writer:music.ar[0].name
     })
     wx.cloud.callFunction({
       name: 'music',
@@ -108,7 +108,7 @@ Page({
         $url: 'musicUrl',
       }
     }).then((res) => {
-      // console.log(res)
+      console.log(res)
       const url = res.result.data[0].url
       if (url === null) {
         wx.showToast({

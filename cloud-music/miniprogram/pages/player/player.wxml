@@ -9,9 +9,15 @@
 </view>
 <view class="player-mask"></view>
 <view class="player-info">
+  <!-- 封面 -->
   <view class="player-disc {{isPlaying?'playing':''}}">
     <image class="player-img zhuan {{isPlaying?'':'ting'}}" src="{{picUrl}}"></image>
   </view>
+  <!-- 进度条 -->
+  <view class="progress-bar">
+    <q-progress-bar bind:musicEnd="onNext"></q-progress-bar>
+  </view>
+  <!-- 控制面板 -->
   <view class="control">
     <text class="iconfont icon-tubiaozhizuomoban11-011" bind:tap="onPrev"></text>
     <text class="iconfont  {{isPlaying?'icon-zanting':'icon-ziyuan48'}}" bind:tap="togglePlaying"></text>

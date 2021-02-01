@@ -54,7 +54,7 @@
   top: -135rpx;
   left: 266rpx;
   background: url('https://image-un.oss-cn-zhangjiakou.aliyuncs.com/image/qzw/WX-music/lALPD3IrtqHd3VHNAZLNARE_273_402.png') no-repeat center/contain;
-  transform: rotate(-15deg);
+  transform: rotate(-20deg);
   transform-origin:24rpx 10rpx ;
   transition:transform 0.8s ease;
 }
@@ -85,6 +85,14 @@
 }
 .ting{
   animation-play-state: paused;
+}
+
+.progress-bar{
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  transform:translateX(-50%);
+  bottom: 24%;
 }
 
 
