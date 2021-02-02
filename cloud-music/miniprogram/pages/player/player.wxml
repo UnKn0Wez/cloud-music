@@ -10,12 +10,14 @@
 <view class="player-mask"></view>
 <view class="player-info">
   <!-- 封面 -->
-  <view class="player-disc {{isPlaying?'playing':''}}">
+  <view class="player-disc {{isPlaying?'playing':''}}" hidden="{{isLyricShow}}" bind:tap="onLyricShow">
     <image class="player-img zhuan {{isPlaying?'':'ting'}}" src="{{picUrl}}"></image>
   </view>
+  <!-- 歌词 -->
+  <q-lyric class="lyric" isLyricShow="{{!isLyricShow}}" lyric="{{lyric}}" bind:tap="onLyricShow"></q-lyric>
   <!-- 进度条 -->
   <view class="progress-bar">
-    <q-progress-bar bind:musicEnd="onNext"></q-progress-bar>
+    <q-progress-bar bind:musicEnd="onNext" bind:timeUpdate="timeUpdate"></q-progress-bar>
   </view>
   <!-- 控制面板 -->
   <view class="control">

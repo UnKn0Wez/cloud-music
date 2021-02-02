@@ -12,6 +12,8 @@ Page({
     isPlaying: false,
     name:'',
     writer:'',
+    isLyricShow : false,
+    lyric : '传给歌词组件的歌词',
   },
 
   /**
@@ -128,7 +130,34 @@ Page({
         isPlaying: true
       })
       wx.hideLoading()
+      //请求歌词
+      wx.cloud.callFunction({
+        name :'music',
+        data :{
+          //方法传入的就有musicId
+          musicId,
+          $url : 'lyric',
+        }
+      }).then((res) =>{
+        // console.log(res)
+        let lyric = '暂无歌词'
+        const lrc = res.result.lrc
+        if(lrc){
+          lyric = lrc.lyric
+        }
+        this.setData({
+          lyric
+        })
+      })
     })
+  },
+  onLyricShow(){
+    this.setData({
+      isLyricShow: !this.data.isLyricShow
+    })
+  },
+  timeUpdate(event){
+    this.selectComponent('.lyric').update(event.detail.currentTime)
   },
   onPrev() {
     playingIndex--

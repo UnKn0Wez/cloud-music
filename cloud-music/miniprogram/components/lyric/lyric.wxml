@@ -1,0 +1,13 @@
+<!--components/lyric/lyric.wxml-->
+<!-- <view class="container" hidden="{{isLyricShow}}">
+   {{lyric}}
+</view> -->
+<scroll-view hidden="{{isLyricShow}}" class="lyric-scroll" scroll-y>
+   <view class="lyric-panel">
+      <block wx:for="{{lyrics}}" wx:key="index">
+         <view class="lyric {{index==nowLyricIndex?'heightlight-lyric':''}}">
+            {{item.lrc}}
+         </view>
+      </block>
+   </view>
+</scroll-view>
