@@ -16,11 +16,6 @@ Page({
     // console.log(options)
     wx.cloud.callFunction({
       name : 'music',
-      data:{
-        phone : '18961877583',
-        password : '59275285w',
-        $url : 'login',
-      }
     }).then((res) =>{
       console.log(res)
     })
