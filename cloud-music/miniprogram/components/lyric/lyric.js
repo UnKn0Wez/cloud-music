@@ -87,7 +87,7 @@ Component({
                let lrc = elem.split(time)[1]
                //正则匹配出时间，分，秒，毫秒
                let timeReg = time[0].match(/(\d{2,}):(\d{2})(?:\.(\d{2,3}))?/)
-               console.log(timeReg)
+               // console.log(timeReg)
                //把时间转换成秒
                let time2Seconds = parseInt(timeReg[1]) * 60 + parseInt(timeReg[2]) + parseInt(timeReg[3]) / 1000
                //每行歌词对象包括：歌词内容和这行歌词所在的秒

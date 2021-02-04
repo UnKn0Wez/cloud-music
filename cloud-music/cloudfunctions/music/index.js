@@ -49,5 +49,12 @@ exports.main = async (event, context) => {
     const res = await axios.get(`${BASE_URL}/lyric?id=${event.musicId}`)
     ctx.body=res.data
   })
+
+  //登录
+  app.router('login',async(ctx,next)=>{
+    console.log
+    const res = await axios.get(`${BASE_URL}/login/cellphone?phone=${event.phone}&password=${event.password}`)
+    ctx.body=res.data
+  })
   return app.serve()
 }

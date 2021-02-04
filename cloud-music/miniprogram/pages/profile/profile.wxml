@@ -1,12 +1,53 @@
 <!--pages/profile/profile.wxml-->
-<view class="profile">
-  <view class="page-body">
-    <view class="page-section page-section-spacing">
-      <view class="text-box" scroll-y="true" scroll-top="{{scrollTop}}">
-        <text>{{text}}</text>
+<view class="profile-title">
+  <view class="title-myself">我的</view>
+</view>
+<view class="profile-container">
+  <view class="profile-info">
+    <view class="info-img">
+      <text class="iconfont icon-wodedangxuan"></text>
+    </view>
+    <text class="info-name">匿名</text>
+    <text class="info-show">什么也没留下哦~</text>
+  </view>
+  <view class="profile-aboutme">
+    <view class="aboutme-info">
+      <view class="aboutme-num">
+        <text>0</text>
+        <text class="aboutme">我关注的问题</text>
       </view>
-      <button disabled="{{!canAdd}}" bindtap="add">新增一行</button>
-      <button disabled="{{!canRemove}}" bindtap="remove">删除一行</button>
+      <view class="aboutme-num">
+        <text>0</text>
+        <text class="aboutme">我关注的人</text>
+      </view>
+      <view class="aboutme-num">
+        <text>0</text>
+        <text class="aboutme">关注我的人</text>
+      </view>
+    </view>
+  </view>
+  <view class="message">
+    <view class="message-info">
+      <text>我的消息</text>
+      <text class="iconfont icon-gengduo"></text>
+    </view>
+    <view class="message-info">
+      <text>我的提问</text>
+      <text class="iconfont icon-gengduo"></text>
+    </view>
+    <view class="message-info">
+      <text>我的回答</text>
+      <text class="iconfont icon-gengduo"></text>
+    </view>
+  </view>
+  <view class="phone">
+    <view class="phone-info">
+      <text class="font">手机号码</text>
+      <text class="iconfont icon-gengduo"></text>
+    </view>
+    <view class="phone-info">
+      <text class="font">实名认证</text>
+      <text class="iconfont icon-gengduo"></text>
     </view>
   </view>
 </view>

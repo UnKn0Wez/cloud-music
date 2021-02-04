@@ -19,6 +19,14 @@ height: 80rpx;
   background-color: #8a8a8a;
   border-radius: 30rpx;
 }
+.music-title-fix{
+  background-color: #fff;
+  height: 180rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
 .music-container{
   position: fixed;
   top: 0;

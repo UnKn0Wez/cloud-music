@@ -1,14 +1,1 @@
 <!--pages/find/find.wxml-->
-<view class="audio-play">
-    <audio src=""></audio>
-  </view>
-  
-  <view>
-    <view class="one-column play-it" bindtap="playMusic">
-      <view>点击播放</view>
-    </view>
-    
-    <progress class="music-prog" bindtouchmove="setTouchMove" percent="{{musicPercent}}"></progress>
-    
-    <view class="percent-num">{{musicPercent}}%</view>
-  </view>
