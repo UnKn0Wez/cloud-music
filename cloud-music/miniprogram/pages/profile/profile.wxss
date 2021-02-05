@@ -41,6 +41,7 @@ page{
    border-radius: 100rpx;
    background-color: #e9e9e9;
 }
+
 .icon-wodedangxuan{
    font-size: 65rpx;
    position: relative;
@@ -54,6 +55,13 @@ page{
    font-size: 45rpx;
    color: #fff;
 }
+.icon-nan{
+   font-size: 40rpx;
+   color: #c9e1ff;
+   position: absolute;
+   top: 10%;
+   left: 40%;
+}
 .info-show{
    position: relative;
    top: 80rpx;
@@ -63,7 +71,7 @@ page{
 }
 .profile-aboutme{
    position: absolute;
-   border-radius: 15rpx;
+   border-radius: 20rpx;
    left: 5%;
    top: 80%;
    width: 90%;
@@ -87,7 +95,7 @@ page{
 }
 .message{
    position: absolute;
-   border-radius: 15rpx;
+   border-radius: 20rpx;
    top: 120%;
    width: 90%;
    left: 5%;

@@ -1,1 +1,12 @@
 <!--pages/find/find.wxml-->
+<view class="title">
+   <view class="find">发现</view>
+</view>
+<view class="header">
+   <view class="left" bind:tap="onPublish">
+      <i class="iconfont icon-kuozhan"></i>
+   </view>
+   <view class="right">
+      <q-search bind:search="onSearch"></q-search>
+   </view>
+</view>

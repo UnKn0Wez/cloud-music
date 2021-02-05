@@ -1,4 +1,5 @@
 // pages/find/find.js
+let keyword =''
 Page({
 
   /**
@@ -62,5 +63,14 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onSearch(event){
+    keyword=event.detail.keyword
+    console.log(keyword)
+  },
+  onPublish(){
+    wx.navigateTo({
+      url: '../publish/publish',
+    })
   }
 })

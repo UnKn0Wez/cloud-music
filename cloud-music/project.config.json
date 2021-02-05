@@ -82,6 +82,12 @@
                "pathName": "pages/profile/profile",
                "query": "",
                "scene": null
+            },
+            {
+               "name": "find",
+               "pathName": "pages/find/find",
+               "query": "",
+               "scene": null
             }
          ]
       }

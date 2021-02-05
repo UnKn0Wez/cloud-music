@@ -9,6 +9,7 @@
     </view>
     <text class="info-name">匿名</text>
     <text class="info-show">什么也没留下哦~</text>
+    <text class="iconfont icon-nan"></text>
   </view>
   <view class="profile-aboutme">
     <view class="aboutme-info">
