@@ -10,3 +10,7 @@
       <q-search bind:search="onSearch"></q-search>
    </view>
 </view>
+<scroll-view class="container">
+   <q-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+   </q-login>
+</scroll-view>

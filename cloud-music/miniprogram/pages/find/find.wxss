@@ -2,7 +2,6 @@
 page {
    background-color: #ededed;
 }
-
 .title {
    background: -webkit-linear-gradient(left, #6190e8, #a7bfe8);
    height: 180rpx;
@@ -28,16 +27,26 @@ page {
    height: 6%;
    align-items: center;
    background-color: #fff;
+   z-index: 2;
 }
 
-.left {
-   margin: 10rpx 20rpx 10rpx 20rpx;
+.header .left {
+   width: 68rpx;
+   height: 68rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
-.right {
-   width: 85%;
+.header .right {
+   width: 88%;
 }
 
 .icon-kuozhan {
    font-size: 40rpx;
+}
+.container{
+   margin-top: 10rpx;
+   box-sizing: border-box;
+   height: 100vh;
 }

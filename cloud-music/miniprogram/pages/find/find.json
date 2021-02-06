@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "q-search" : "/components/search/search"
+    "q-search" : "/components/search/search",
+    "q-login" : "/components/login/login"
   }
 }
