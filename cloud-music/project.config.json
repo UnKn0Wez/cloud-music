@@ -88,6 +88,12 @@
                "pathName": "pages/find/find",
                "query": "",
                "scene": null
+            },
+            {
+               "name": "publish",
+               "pathName": "pages/publish/publish",
+               "query": "nickName=UnKnOW~&avatarUrl=https://thirdwx.qlogo.cn/mmopen/vi_32/JL1UJEK9TpibLl832bSww8tkX7A6ChRD35Vic3fSFmQtyKlIb9eZEe20hCg80EjIxmKKtXXaibTibib9Ynd4FfDArZw/132",
+               "scene": null
             }
          ]
       }
