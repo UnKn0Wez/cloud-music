@@ -3,14 +3,20 @@
    <view class="find">发现</view>
 </view>
 <view class="header">
-   <view class="left" bind:tap="onPublish">
+   <view class="publish-container" bind:tap="onPublish">
       <i class="iconfont icon-kuozhan"></i>
    </view>
-   <view class="right">
+   <view class="search-container">
       <q-search bind:search="onSearch"></q-search>
    </view>
 </view>
-<scroll-view class="container">
-   <q-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
-   </q-login>
-</scroll-view>
+<view class="container">
+   <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+         <q-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goComment"></q-blog-card>
+      </view>
+   </block>
+</view>
+
+<q-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+</q-login>

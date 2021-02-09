@@ -29,6 +29,7 @@ Component({
          this.setData({
             inputValue:'',
          })
+         keyword=''
       },
       onSearch(){
          console.log(keyword)

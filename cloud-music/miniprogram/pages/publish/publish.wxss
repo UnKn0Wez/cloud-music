@@ -81,7 +81,7 @@ page {
    position: fixed;
    width: 100%;
    right: 0;
-   /* bottom: 0; */
+   bottom: 0;
    border-style: border-box;
    display: flex;
    align-items: center;

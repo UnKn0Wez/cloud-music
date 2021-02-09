@@ -7,13 +7,14 @@ Page({
    */
   data: {
    modalShow:false,
+   blogList:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this._loadBlogList()
   },
 
   /**
@@ -65,8 +66,12 @@ Page({
 
   },
   onSearch(event){
+    this.setData({
+      blogList:[]
+    })
     keyword=event.detail.keyword
-    console.log(keyword)
+    this._loadBlogList(0)
+    // console.log(keyword)
   },
   onPublish(){
     wx.getSetting({
@@ -101,6 +106,27 @@ Page({
     wx.showModal({
       title:'授权用户才能发布',
       content:''
+    })
+  },
+  _loadBlogList(start =0){
+    wx.showLoading({
+      title:'数据加载中',
+    })
+    wx.cloud.callFunction({
+      name:'blog',
+      data:{
+        keyword,
+        start,
+        count:10,
+        $url:'list',
+      }
+    }).then((res)=>{
+      console.log(res)
+      this.setData({
+        blogList:this.data.blogList.concat(res.result)
+      })
+      wx.hideLoading()
+      wx.stopPullDownRefresh()
     })
   }
 })
