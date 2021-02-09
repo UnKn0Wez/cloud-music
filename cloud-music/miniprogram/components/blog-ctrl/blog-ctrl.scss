@@ -1,0 +1,60 @@
+@import "../../global.scss";
+
+.ctrl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $uni-bg-color;
+
+    .ctrl-item{
+        flex: 1;
+        height: 68rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.iconfont{
+    margin-right: $gap;
+    margin-right: $gap;
+    font-size: $primarySize;
+    color: $uni-text-color;
+}
+
+.item{
+    color: $uni-text-color;
+    font-size: $primarySize;
+    font-weight: 400;
+    border-radius: 15rpx;
+}
+
+.share-btn{
+    background-color: $uni-bg-color;
+    color: $uni-bg-color;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid #ccc;
+}
+
+.comment-content{
+    width: 560rpx;
+    text-align: left;
+    padding: 20rpx;
+    font-size: 32rpx;
+}
+
+.send{
+    display: block;
+    width: 180rpx;
+    height: $primarySize*2;
+    line-height: $primarySize*2;
+    background: #6190e8;
+    color: $uni-text-color;
+    font-size: $primarySize;
+    border-radius: $gap/2;
+    position: absolute;
+    right: $gap;
+    bottom: $gap;
+}

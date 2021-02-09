@@ -96,7 +96,7 @@ page {
    padding-right: 40rpx;
 }
 .send-btn{
-   background: #a081ab;
+   background: #6190e8;
    color: #fff;
    font-size: 28rpx;
 }

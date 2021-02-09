@@ -1,4 +1,6 @@
 {
    "component": true,
-   "usingComponents": {}
+   "usingComponents": {
+      "q-blog-ctrl":"/components/blog-ctrl/blog-ctrl"
+   }
 }
