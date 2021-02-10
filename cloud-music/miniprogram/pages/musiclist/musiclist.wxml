@@ -1,10 +1,8 @@
 <!--pages/musiclist/musiclist.wxml-->
 <view class="detail-fix" style='background:url({{listInfo.coverImgUrl}}) no-repeat top/cover'>
-  
 </view>
 <text class="iconfont icon-fanhui" bind:tap="fanhui"></text>
 <view class="detail-fix-mask">
-  
 </view>
 
 <!-- 判断是否有封面图，有就作为顶部view区域的背景图 -->
@@ -13,7 +11,7 @@
 </view>
 <!-- 遮罩层 -->
 <view class="detail-mask" style='background:url({{listInfo.coverImgUrl}}) no-repeat center/cover'>
-  
+
 </view>
 <view class="detail-mask-mask"></view>
 <!-- 歌单信息，左图右文 -->

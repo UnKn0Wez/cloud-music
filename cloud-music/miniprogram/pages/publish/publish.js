@@ -92,6 +92,11 @@ Page({
          })
       }
    },
+   fanhui() {
+      wx.navigateBack({
+        delta: 1,
+      })
+    },
    send() {
       //发布流程
       //图片-> 云存储 fileID 云文件ID

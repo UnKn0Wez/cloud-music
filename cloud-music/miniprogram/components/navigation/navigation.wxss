@@ -1,0 +1,37 @@
+page {
+   --height: 44px;
+   --right: 190rpx;
+}
+
+.navbar-content {
+   overflow: hidden;
+   position: fixed;
+   z-index: 10000;
+   width: 750rpx;
+   top: 0
+}
+
+.navbar-content .android {
+   --height: 48px;
+   --right: 222rpx
+}
+
+.navbar-inner {
+   height: var(--height);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.navbar-left {
+   position: absolute;
+   left: 10rpx;
+}
+
+.navbar-center {
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}

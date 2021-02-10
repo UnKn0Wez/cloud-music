@@ -128,5 +128,16 @@ Page({
       wx.hideLoading()
       wx.stopPullDownRefresh()
     })
+  },
+  goDetail(event){
+    wx.navigateTo({
+      url: '../../pages/blog-detail/blog-detail?blogId='+event.target.dataset.blogid,
+    })
+  },
+  onPullDownRefresh:function(){
+    this.setData({
+      blogList:[]
+    })
+    this._loadBlogList(0)
   }
 })

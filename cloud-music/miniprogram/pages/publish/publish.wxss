@@ -3,21 +3,29 @@ page {
    background-color: #ededed;
 }
 .publish-title{
-   background:-webkit-linear-gradient(left,#6190e8,#a7bfe8);
-   height: 180rpx;
-   width: 100%;
-   position: fixed;
-   top: 0;
-   z-index: 2;
+   background: -webkit-linear-gradient(left, #6190e8, #a7bfe8);
+  height: 180rpx;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
  }
- .publish-title-top{
- height: 80rpx;
+ /* .publish-title-top{
+   height: 80rpx;
+ } */
+ .publish-title .publish-title-bottom{
+   color: #fff;
+  font-size: large;
+  position: absolute;
+  left: 45%;
+  bottom: 15%;
  }
- .publish-title-bottom{
-   position: fixed;
-   top: 108rpx;
-   left: 45%;
-   height: 50rpx;
+ .publish-title .icon-fanhui {
+   color: #fff;
+   font-size: 36rpx;
+   position: absolute;
+   left: 20rpx;
+   bottom: 17%;
  }
 
 .container{

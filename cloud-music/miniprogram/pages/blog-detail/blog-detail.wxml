@@ -1,0 +1,31 @@
+<view class="title">
+   <view class="find">发现</view>
+   <i class="iconfont icon-fanhui" bind:tap="fanhui"></i>
+</view>
+<scroll-view scroll-y class="container" style="top:90px;">
+   <!-- 顶部博客卡片 -->
+   <view>
+      <q-blog-card blog="{{blog}}"></q-blog-card>
+   </view>
+   <view class="tab">评论列表</view>
+   <!-- 评论内容列表 -->
+   <view class="comment-list">
+      <!-- 遍历博客的评论数组 -->
+      <block wx:for="{{commentList}}" wx:key="_id">
+         <view class="comment">
+            <!-- 评论人头像和昵称 -->
+            <view class="comment-title">
+               <image class="comment-avatar" src="{{item.avatarUrl}}"></image>
+               <text class="comment-nickname">{{item.nickName}}</text>
+            </view>
+            <!-- 评论内容 -->
+            <view class="comment-content">{{item.content}}</view>
+            <!-- 评论时间 -->
+            <view class="comment-time">{{item.createTime}}</view>
+         </view>
+      </block>
+   </view>
+</scroll-view>
+<view class="blog-ctrl">
+   <q-blog-ctrl blogId="{{blog._id}}" bind:refreshCommentList="_getBlogDetail"></q-blog-ctrl>
+</view>

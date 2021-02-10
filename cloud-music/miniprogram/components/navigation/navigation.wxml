@@ -1,0 +1,12 @@
+<view class="navbar-inner {{ios ? 'ios' : 'android'}} " style="paddingtop: {{statusBarHeight}}px;"></view>
+<view class="navbar-content" style="background-color:red;">
+   <view class="{{ios ? 'ios' : 'android'}}"></view>
+   <view class="navbar-inner {{ios ? 'ios' : 'android'}} " style="padding-top: {{statusBarHeight}}px;">
+      <view class="navbar-left">
+         <slot name="left"></slot>
+      </view>
+      <view class="navbar-center" style="width:{{contentWidth}};">
+         <slot name="content"></slot>
+      </view>
+   </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "q-blog-card":"/components/blog-card/blog-card",
+    "q-blog-ctrl":"/components/blog-ctrl/blog-ctrl"
+  }
+}

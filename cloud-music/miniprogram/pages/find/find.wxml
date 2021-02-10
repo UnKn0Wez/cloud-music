@@ -13,7 +13,8 @@
 <view class="container">
    <block wx:for="{{blogList}}" wx:key="_id">
       <view class="blog-panel">
-         <q-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goComment"></q-blog-card>
+         <q-blog-card blog="{{item}}" data-blogid="{{item._id}}" bind:tap="goDetail"></q-blog-card>
+         <q-blog-ctrl blog="{{item}}" blogId="{{item._id}}"></q-blog-ctrl>
       </view>
    </block>
 </view>

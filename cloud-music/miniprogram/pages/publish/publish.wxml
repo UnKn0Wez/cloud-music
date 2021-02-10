@@ -2,6 +2,7 @@
 <view class="publish-title">
   <view class="publish-title-top"></view>
   <view class="publish-title-bottom">发布</view>
+  <i class="iconfont icon-fanhui" bind:tap="fanhui"></i>
 </view>
 
 <view class="container">

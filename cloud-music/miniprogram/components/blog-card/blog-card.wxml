@@ -22,5 +22,5 @@
             </view>
         </block>
     </view>
-    <q-blog-ctrl blog="{{blog}}" blogId="{{blog._id}}"></q-blog-ctrl>
+    
 </view>
