@@ -1,140 +1,100 @@
-page{
-   background-color: #eef4f8;
-   font-size: 45rpx;
-}
-.profile-title{
-   text-align: center;
-   background-color: #1377ff;
-   position: fixed;
-   top: 0;
-   left: 0;
-   height: 12.3%;
-   width: 100%;
-   z-index: 100;
-}
-/* 810px   1620rpx */
-.title-myself{
-   position: relative;
-   top: 62%;
-   color: #fff;
-   font-size: 70%;
-}
-.profile-container{
-   position: absolute;
-   top: 0;
-   left: 0;
-   height: 35%;
-   width: 100%;
-   background-color: #1377ff;
-}
-.profile-info{
-   display: flex;
-   position: relative;
-   top: 40%;
-}
-.info-img{
-   position: relative;
-   left: 40rpx;
-   width: 140rpx;
-   height: 140rpx;
-   text-align: center;
-   border-radius: 100rpx;
-   background-color: #e9e9e9;
+@charset "UTF-8";
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page {
+  background-color: #ededed;
 }
 
-.icon-wodedangxuan{
-   font-size: 65rpx;
-   position: relative;
-   top: 25%;
-   color: #c3c3c3;
+.profile-header {
+  background-image: url("https://image-un.oss-cn-zhangjiakou.aliyuncs.com/image/qzw/WX-music/profile-bg.jpg");
+  background-size: cover;
+  height: 480rpx;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
 }
-.info-name{
-   position: relative;
-   left: 60rpx;
-   top: 5rpx;
-   font-size: 45rpx;
-   color: #fff;
+
+.avatar {
+  width: 200rpx;
+  height: 200rpx;
+  display: block;
+  overflow: hidden;
+  border: 6rpx solid #ccc;
+  border-radius: 50%;
+  margin-top: 20rpx;
+  z-index: 1000;
 }
-.icon-nan{
-   font-size: 40rpx;
-   color: #c9e1ff;
-   position: absolute;
-   top: 10%;
-   left: 40%;
+
+.nickname {
+  font-size: 32rpx;
+  margin-top: 40rpx;
 }
-.info-show{
-   position: relative;
-   top: 80rpx;
-   left: -3.5%;
-   color: #bedcff;
-   font-size: 70%;
+
+.nav {
+  overflow: hidden;
+  margin: 20rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
-.profile-aboutme{
-   position: absolute;
-   border-radius: 20rpx;
-   left: 5%;
-   top: 80%;
-   width: 90%;
-   height: 35%;
-   background-color: #fff;
+
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 30rpx;
+  min-height: 100rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
-.aboutme-info{
-   margin-top: 5%;
-   margin-bottom: 5%;
-   display: flex;
-   align-items: center;
+
+.content {
+  font-size: 32rpx;
+  line-height: 1.6em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.aboutme{
-   font-size: 70%;
+
+.text {
+  color: #4b4b4b;
 }
-.aboutme-num{
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.message{
-   position: absolute;
-   border-radius: 20rpx;
-   top: 120%;
-   width: 90%;
-   left: 5%;
-   height: 60%;
-   background-color: #fff;
-   display: flex;
-   flex-direction: column;
-}
-.message-back{
-   background-color: #fff;
-}
-.message-info{
-   flex: 1;
-   position: relative;
-   left: 5%;
-   top: 8%;
-}
-.icon-gengduo{
-   color: #b9b9b9;
-   position: relative;
-   right: -410rpx;
-}
-.phone{
-   position: absolute;
-   border-radius: 15rpx;
-   top: 185%;
-   width: 90%;
-   left: 5%;
-   height: 40%;
-   background-color: #fff;
-   display: flex;
-   flex-direction: column;
-}
-.font{
-   width: 280rpx;
-}
-.phone-info{
-   flex: 1;
-   position: relative;
-   left: 5%;
-   top: 8%;
+
+.iconfont .icon-right {
+  font-size: 32rpx;
+  color: 32rpx;
 }

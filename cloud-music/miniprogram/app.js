@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function (options) {
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -14,7 +14,24 @@ App({
         traceUser: true,
       })
     }
-    this.globalData = {}
+
+    this.getOpenid()
+
+    this.globalData = {
+      // sysInfo:this.getSysInfo(),
+      openid:-1,
+    }
+  },
+  getOpenid(){
+    wx.cloud.callFunction({
+      name:'login'
+    }).then((res)=>{
+      const openid = res.result.openid
+      this.globalData.openid=openid
+      if(wx.getStorageSync(openid)==''){
+        wx.setStorageSync(openid,[])
+      }
+    })
   },
   onShow(options){
     // console.log('onShow 执行');

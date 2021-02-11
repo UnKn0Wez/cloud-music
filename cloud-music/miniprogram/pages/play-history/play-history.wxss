@@ -1,0 +1,28 @@
+.title {
+   background: -webkit-linear-gradient(left, #6190e8, #a7bfe8);
+   height: 180rpx;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   z-index: 100;
+ }
+ 
+ .title .find {
+   color: #fff;
+   font-size: large;
+   position: absolute;
+   left: 40%;
+   bottom: 15%;
+ }
+ 
+ .title .icon-fanhui {
+   color: #fff;
+   font-size: 36rpx;
+   position: absolute;
+   left: 20rpx;
+   bottom: 17%;
+ }
+ .music{
+    position: relative;
+    top: 180rpx;
+ }

@@ -1,0 +1,5 @@
+<view class="title">
+   <view class="find">最近播放</view>
+   <i class="iconfont icon-fanhui" bind:tap="fanhui"></i>
+</view>
+<q-musiclist musiclist="{{musiclist}}" class="music"></q-musiclist>

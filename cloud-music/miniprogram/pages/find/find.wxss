@@ -27,9 +27,9 @@ page {
 .title .find {
   color: #fff;
   font-size: large;
-  position: absolute;
+  position: relative;
   left: 45%;
-  bottom: 15%;
+  top: 55%;
 }
 
 .header {
@@ -67,7 +67,7 @@ page {
 }
 
 .publish-container .icon-kuozhan {
-  font-size: 40rpx;
+  font-size: 48rpx;
   color: #4b4b4b;
 }
 

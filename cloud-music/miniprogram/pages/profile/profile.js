@@ -7,6 +7,7 @@ Page({
   data: {
     
   },
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -64,5 +65,23 @@ Page({
       title: 'text',
       path: 'page/component/pages/text/text'
     }
+  },
+  onTapQrCode(){
+    console.log('小程序')
+    wx.showLoading({
+      title: '生成中',
+    })
+    //调用云函数生成小程序吗
+    wx.cloud.callFunction({
+      name:'getQrCode'
+    }).then((res)=>{
+      const fileId=res.result
+      //预览生成的小程序图片
+      wx.previewImage({
+        urls: [fileId],
+        current:fileId
+      })
+      wx.hideLoading()
+    })
   }
 })

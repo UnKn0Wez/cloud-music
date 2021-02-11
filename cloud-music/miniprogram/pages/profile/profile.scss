@@ -1,0 +1,63 @@
+@import "../../global.scss";
+
+//头部
+.profile-header{
+    background-image: url("https://image-un.oss-cn-zhangjiakou.aliyuncs.com/image/qzw/WX-music/profile-bg.jpg");
+    background-size: cover;
+    height: 480rpx;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: $bgColor;
+}
+
+.avatar{
+    width: 200rpx;
+    height: 200rpx;
+    display: block;
+    overflow: hidden;
+    border: 6rpx solid $borderColor;
+    border-radius: 50%;
+    margin-top: $gap;
+    z-index: 1000;
+}
+
+.nickname{
+    font-size: $primarySize;
+    margin-top: $gap*2;
+}
+
+.nav{
+    overflow: hidden;
+    margin: $gap;
+    box-sizing: border-box;
+}
+
+.nav-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+    min-height: 100rpx;
+    background-color: $bgColor;
+    border-bottom: 1px solid $borderColor;
+}
+
+.content{
+    font-size: $primarySize;
+    line-height: 1.6em;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text{
+    color: $primaryColor;
+}
+
+.iconfont .icon-right{
+    font-size: 32rpx;
+    color: $primarySize;
+}
