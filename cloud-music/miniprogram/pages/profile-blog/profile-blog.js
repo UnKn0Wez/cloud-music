@@ -1,4 +1,5 @@
 // pages/profile-blog/profile-blog.js
+import formatTime from '../../utils/formatTime.js'
 const MAX_LIMIT = 10
 const db = wx.cloud.database()
 Page({
@@ -92,9 +93,11 @@ Page({
             count:MAX_LIMIT
          }
       }).then((res)=>{
+         console.log(res)
          let arr = res.result
          for(let i = 0,len = arr.length;i<len;i++){
             arr[i].x=0
+            arr[i].createTime=formatTime(new Date(arr[i].createTime))
          }
          this.setData({
             blogList:this.data.blogList.concat(arr)
