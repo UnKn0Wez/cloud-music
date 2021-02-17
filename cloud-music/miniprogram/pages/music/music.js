@@ -46,6 +46,7 @@ Page({
    */
   onLoad: function (options) {
     this._getPlaylist()
+    this._getSwiper()
   },
 
   /**
@@ -84,6 +85,7 @@ Page({
       playlist:[]
     })
     this._getPlaylist()
+    this._getSwiper()
   },
 
   /**
@@ -117,6 +119,19 @@ Page({
       })
       wx.stopPullDownRefresh()
       wx.hideLoading()
+    })
+  },
+  _getSwiper(){
+    wx.cloud.callFunction({
+      name:'music',
+      data:{
+        $url:'swiper',
+      }
+    }).then((res)=>{
+      console.log(res)
+      this.setData({
+        imgUrl:res.result.data
+      })
     })
   }
 })

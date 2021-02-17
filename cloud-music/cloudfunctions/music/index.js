@@ -44,6 +44,17 @@ exports.main = async (event, context) => {
     ctx.body=res.data
   })
 
+  //查询轮播图
+  app.router('swiper',async(ctx,next)=>{
+    ctx.body=await cloud
+      .database()
+      .collection('swiper')
+      .get()
+      .then((res)=>{
+        return res
+      })
+  })
+
   //根据歌曲id获取歌词
   app.router('lyric',async(ctx,next)=>{
     const res = await axios.get(`${BASE_URL}/lyric?id=${event.musicId}`)

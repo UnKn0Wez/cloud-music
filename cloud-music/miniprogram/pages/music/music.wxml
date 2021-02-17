@@ -7,7 +7,7 @@
 <view class="music-mask"></view>
 <swiper indicator-dots="true" indicator-active-color="#d43c33" autoplay="true" interval="3000" duration="1000" class="swiper">
   <swiper-item wx:for="{{imgUrl}}">
-    <image src="{{item.url}}" class="img" mode="scaleToFill"></image>
+    <image src="{{item.fileid}}" class="img" mode="scaleToFill"></image>
   </swiper-item>
 </swiper>
 <view class="title">场景歌单</view>
