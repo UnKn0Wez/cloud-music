@@ -29,10 +29,12 @@ app.use(async (ctx, next) => {
 //通过require引入playlist模块
 const playlist = require('./controller/playlist.js')
 const swiper = require('./controller/swiper.js')
+const blog=require('./controller/blog.js')
 
 //给playlist模块使用定义跟路由为'/playlist'
 router.use('/playlist', playlist.routes())
 router.use('/swiper',swiper.routes())
+router.use('/blog',blog.routes())
 
 //使用路由
 app.use(router.routes())
